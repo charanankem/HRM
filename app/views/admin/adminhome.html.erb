@@ -1,0 +1,23 @@
+<div class="adminmaincont">
+<%= render "admin/adminmenu" %>
+<div>
+  <h1>leaves</h1>
+  <%= form_with model:@leave do  |f| %>
+    <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %><br />
+      <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+  <% end %>
+  
+</div>
+
+</div>

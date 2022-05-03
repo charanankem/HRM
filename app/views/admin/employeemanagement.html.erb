@@ -1,0 +1,14 @@
+<div class="employeemanagement-main-cont">
+<%= render "admin/adminmenu" %>
+<div>
+<%= button_to 'Add New Employee', new_employee_registration_path, method: :get%>
+
+<% @employees.each do |employee|%>
+  <tr>
+  <td><%= employee.first_name%></td>
+  <td><%= employee.last_name%></td>
+  </tr>
+  <%end%>
+
+</div>
+</div>

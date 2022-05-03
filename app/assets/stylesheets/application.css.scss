@@ -1,0 +1,42 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+ .home-main-cont{
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(221, 231, 231), rgb(188, 197, 179),lightskyblue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-para-1{
+  font-size: 30px;
+  color: white;
+}
+.navigation-button{
+  border-radius: 80px;
+  margin-right: 10px;
+  color: white;
+  background-color: rgb(187, 116, 116);
+  border-style: none;
+  height: 40px;
+  width: 40px;
+}
+.right-nav{
+  align-items: center;
+}

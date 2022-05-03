@@ -1,0 +1,45 @@
+<div class="formmaincont">
+<div>
+<%= form_with model: @emplyee_leave do |f| %>
+  
+      <div class="field">
+        <%= f.label :leave_id, "Leave Id"%><br />
+        <%= f.number_field :leave_id, autofocus: true, autocomplete: "leave_id" %>
+      </div>
+      <div class="field">
+        <%= f.label :emplyee_id, "Employe Id" %><br />
+        <%= f.number_field :emplyee_id, autofocus: true, autocomplete: "emplyee-id" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :start_date%><br />
+        <%= f.date_field :start_date, autofocus: true, autocomplete: "start_date" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :end_date %><br />
+        <%= f.date_field :end_date, autofocus: true, autocomplete: "end_date" %>
+      </div>
+</div>
+<div class="formbottomcont">
+      <div class="field">
+        <%= f.label :confirmed_by %><br />
+        <%= f.text_field :confirmed_by, autofocus: true, autocomplete: "confirmed_by" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :status  %><br />
+        <%= f.text_field :status, autofocus: true, autocomplete: "status" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :reason %><br />
+        <%= f.text_field :reason, autofocus: true, autocomplete: "reason" %>
+      </div>
+
+  <div class="actions ">
+    <%= f.submit "Add" %>
+  </div>
+<% end %>
+</div>
+</div>

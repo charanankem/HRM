@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+    <img src="https://zensark.com/zensark2/wp-content/uploads/2021/01/Asset-16.png" width="90" height="30"> 
+    </a>
+    <% if current_employee %>
+    <div class="d-flex flex-row right-nav">
+      <p><%= @name%></p>
+      <div class="btn-group dropdown">
+      <button type="button" class="navigation-button" data-bs-toggle="dropdown" aria-expanded="false">
+      C
+      </button>
+      <ul class="dropdown-menu">
+      <div class="list-container">
+        <%= button_to "Logout", destroy_employee_session_path, method: :delete, :class=>"btn btn-danger"%>
+        <div>
+      </ul>
+      </div>
+      </div>
+      <% else %>
+        <%= button_to "sign in", employee_session_url, method: :get, :class => 'btn btn-warning signup'%>
+      <% end %>
+    </div>
+
+  </div>
+</nav>

@@ -1,0 +1,35 @@
+.page-container{
+  display: flex;
+  flex-direction: row;
+}
+.loginmaincont {
+  margin-left: 11vw;
+  margin-top: 20vh;
+}
+.loginmainhead {
+  font-weight: 300;
+  margin-bottom: 11px;
+}
+.sidecontainer{
+  align-items: center;
+}
+.image{
+  height: 400px;
+  width: 450px;
+  margin-left: 251px;
+  margin-top: 25px;
+}
+.field1{
+  margin-bottom: 5px;
+}
+.main{
+  margin-right: 21px;
+}
+.loginbutton{
+  background-color: blueviolet;
+  border-style: none;
+  color: white;
+  width: 250px;
+  height: 30px;
+  border-radius: 5px;
+}

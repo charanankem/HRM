@@ -1,0 +1,29 @@
+<div class="main-container">
+<%= render "home/menu" %>
+  <div class="right-container">
+    <div class="righttop-container">
+      <div class="dash-container">
+      <%= column_chart [["2021-01-01", 2], ["2021-01-02", 3],["2021-01-03", 4], ["2021-01-04", 5],["2021-01-05", 6], ["2021-01-06", 7],["2021-01-07", 8]], height: "216px" %>
+      </div>
+      <div class="heading-container">
+        <h1 class="attendace-heading">Attendance Details</h1>
+      </div>
+    </div>
+    <div class="rightbottom-container">
+      <div class="rightbottom-left-container">
+        <div class="upcoming-leaves-container">
+        </div>
+        <div class="heading-container">
+          <h1 class="leaves-heading">Upcoming leaves</h1>
+        </div>
+      </div>
+      <div class="rightbottom-right-container">
+        <div>
+        </div>
+        <div class="heading-container">
+          <h1 class="holidays-heading">Upcoming holidays</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

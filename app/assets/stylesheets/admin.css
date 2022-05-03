@@ -1,0 +1,21 @@
+.adminmaincont{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.employeemanagement-main-cont{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.holidays-main-cont{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.designation-main-cont{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+}
