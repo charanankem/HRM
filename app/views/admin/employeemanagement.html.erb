@@ -1,14 +1,28 @@
 <div class="employeemanagement-main-cont">
 <%= render "admin/adminmenu" %>
-<div>
-<%= button_to 'Add New Employee', new_employee_registration_path, method: :get%>
-
-<% @employees.each do |employee|%>
-  <tr>
-  <td><%= employee.first_name%></td>
-  <td><%= employee.last_name%></td>
-  </tr>
-  <%end%>
-
+<div class="table-cont">
+<h1 class="leave-head">Employee Management</h1>
+<table class="table">
+    <tr>
+      <th>Name</th>
+      <th>E Mail</th>
+      <th>Employee Id</th>
+    </tr>
+<% @employees.each do |employee| %>
+    <tr>
+      <td>
+      <%= employee.first_name+" "+employee.last_name%>
+      </td>
+      <td>
+      <%= employee.email%>
+      </td>
+      <td>
+      <%= employee.employee_unique_id%>
+      </td>
+    <% end %>
+  </table> 
+  <div>
+  <%= button_to 'Add New Employee', new_employee_registration_path, method: :get,class:"employee-add-button"%>
+  </div>
 </div>
 </div>

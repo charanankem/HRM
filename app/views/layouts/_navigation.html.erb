@@ -1,26 +1,28 @@
-<nav class="navbar navbar-light bg-light">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-    <img src="https://zensark.com/zensark2/wp-content/uploads/2021/01/Asset-16.png" width="90" height="30"> 
-    </a>
-    <% if current_employee %>
-    <div class="d-flex flex-row right-nav">
-      <p><%= @name%></p>
-      <div class="btn-group dropdown">
-      <button type="button" class="navigation-button" data-bs-toggle="dropdown" aria-expanded="false">
-      C
-      </button>
-      <ul class="dropdown-menu">
-      <div class="list-container">
-        <%= button_to "Logout", destroy_employee_session_path, method: :delete, :class=>"btn btn-danger"%>
-        <div>
-      </ul>
+<nav class="navbar navbar-dark bg-dark">
+<div class="navigation">
+  <a class="navbar-brand ml-5" href="/">
+    <img class="zensark-img" src="https://zensark.com/zensark2/wp-content/uploads/2021/01/Asset-16.png">
+  </a>
+  <% if current_employee %>
+    <div class="profile-container">
+      <p class="profile-name"><%= $name%></p>
+      <div class="dropdown">
+        <button class="round-button" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <%= $pname %>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Adminstration</a></li>
+          <li><a class="dropdown-item" href="#">Manager</a></li>
+          <li><%= button_to "Logout", destroy_employee_session_path, class: " dropdown-item btn btn-secondary", method: :delete%></li>
+        </ul>
       </div>
-      </div>
-      <% else %>
-        <%= button_to "sign in", employee_session_url, method: :get, :class => 'btn btn-warning signup'%>
-      <% end %>
     </div>
-
-  </div>
+  <% else%>
+  <% if request.path.split("/").last == 'sign_in' || request.path.split("/").last == 'sign_in?' %>
+    <%= button_to "Home", root_path, class: "btn btn-warning", method: :get %>
+  <% else %>
+    <%= button_to "sign in", new_employee_session_path, class: "btn btn-warning mr-5", method: :get %>
+  <% end%>
+  <%end%>
+</div>
 </nav>

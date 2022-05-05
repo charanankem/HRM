@@ -27,5 +27,6 @@ class AdminController < ApplicationController
   def designationsparams
     params.permit(:name , :description)
   end
+  
 
 end

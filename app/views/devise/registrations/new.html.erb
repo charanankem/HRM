@@ -1,34 +1,36 @@
-<h2>Sign up</h2>
+<h2 class="employee-main-head">Create Employee</h2>
+<div class="employee-main-cont">
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field1">
+  <div class="field-form">
     <%= f.label :first_name %><br />
     <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
   </div>
 
-  <div class="field1">
+  <div class="field-form">
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
   </div>
 
-  <div class="field1">
+  <div class="field-form">
     <%= f.label :employee_unique_id, "EmployeeId"%><br />
     <%= f.text_field :employee_unique_id,  autofocus: true, autocomplete: "employee_unique_id" %>
   </div>
 
-  <div class="field1">
+  <div class="field-form">
     <%= f.label :role_id, "RoleId" %><br />
     <%= f.text_field :role_id, autofocus: true, autocomplete: "role_id" %>
   </div>
 
-  <div class="field">
+  <div class="field-form">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field-form">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -36,14 +38,13 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field-form">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up",class: "save-button" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</div>

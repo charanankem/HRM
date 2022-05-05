@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'adminhome', to:"admin#adminhome"
   get 'holidays', to: "admin#holidays"
   get 'employeemanagement', to: "admin#employeemanagement"
+  get 'projectmanagement', to: "admin#projectmanagement"
   
   get 'adminhome', to:"admin#adminhome"
   post 'adminhome', to: "admin#create"
