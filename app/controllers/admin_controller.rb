@@ -5,7 +5,8 @@ class AdminController < ApplicationController
   def create
     @leaves= Leave.new(leavesparams)
     @leaves.save
-    render plain: @leaves.errors.inspect
+    #render plain: @leaves.errors.inspect
+    redirect_to adminhome_path
   end
   def leavesparams
     params.permit(:name , :description)
@@ -14,19 +15,7 @@ class AdminController < ApplicationController
   def employeemanagement
     @employees=Employee.all
   end
-
-
-  def new
-    @designations = Designation.new
+  def adminhome
+    @leave = Leave.all
   end
-  def create
-    @designations= Designation.new(designationsparams)
-    @designations.save
-    render plain: @designations.errors.inspect
-  end
-  def designationsparams
-    params.permit(:name , :description)
-  end
-  
-
 end

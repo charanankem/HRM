@@ -1,0 +1,46 @@
+<div class="designation-main-cont">
+<%= render "admin/adminmenu" %>
+<div class="designation-form-cont">
+<h2>Add Project</h2>
+<%= form_with model:@projects_management do  |f| %>
+  <div class="field-form">
+      <%= f.label :project_name %><br />
+      <%= f.text_field :project_name, autofocus: true, autocomplete: "project_name" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :client %><br />
+    <%= f.text_field :client, autofocus: true, autocomplete: "client" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :manager_id %><br />
+    <%= f.text_field :manager_id, autofocus: true, autocomplete: "manager_id" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :client_time_zone %><br />
+    <%= f.date_field :client_time_zone, autofocus: true, autocomplete: "client_time_zone" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :shift_information %><br />
+    <%= f.text_field :shift_information, autofocus: true, autocomplete: "shift_information" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :project_type %><br />
+    <%= f.text_field :project_type, autofocus: true, autocomplete: "project_type" %>
+  </div>
+
+<div class="actions">
+  <%= f.submit "Save",class: "save-button" %>
+</div> 
+<% end %>
+</div>
+</div> 

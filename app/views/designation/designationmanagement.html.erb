@@ -1,0 +1,23 @@
+<div class="designation-main-cont">
+<%= render "admin/adminmenu" %>
+<div class="leaves-main-cont">
+<h1 class="leave-head">Designation Management</h1>
+  <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Edit</th>
+      </tr>
+  <% @designations.each do |designation| %>
+      <tr>
+        <td>
+        <%= designation.name%>
+        </td>
+        <td>
+        <%= designation.description%>
+        </td>
+      <% end %>
+    </table> 
+    <%= button_to "Add Designation", designationform_path,method: :get,class: "save-button" %>
+</div>
+</div>

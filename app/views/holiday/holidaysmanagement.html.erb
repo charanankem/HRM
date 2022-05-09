@@ -1,0 +1,23 @@
+<div class="designation-main-cont">
+<%= render "admin/adminmenu" %>
+<div class="leaves-main-cont">
+<h1 class="leave-head">Holiday Management</h1>
+  <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Edit</th>
+      </tr>
+  <% @holidays.each do |holiday| %>
+      <tr>
+        <td>
+        <%= holiday.name%>
+        </td>
+        <td>
+        <%= holiday.date%>
+        </td>
+      <% end %>
+    </table> 
+    <%= button_to "Add Holiday", holidaysform_path,method: :get,class: "save-button" %>
+</div>
+</div>

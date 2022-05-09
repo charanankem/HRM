@@ -5,6 +5,8 @@ class HomeController < ApplicationController
     $name = full_name
     $pname = profile_name
   end
+
+  
   def full_name
     user=Employee.find(current_employee.id)
     first_name = user.first_name

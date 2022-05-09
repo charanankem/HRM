@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_02_133511) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_09_053812) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -88,6 +88,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_133511) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "holidays", force: :cascade do |t|
+    t.string "name"
+    t.date "date"
+    t.string "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "leaves", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -100,6 +108,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_133511) do
     t.string "description"
     t.integer "project_lead_id"
     t.integer "manager_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects_managements", force: :cascade do |t|
+    t.string "project_name"
+    t.string "client"
+    t.integer "manager_id"
+    t.string "description"
+    t.time "client_time_zone"
+    t.string "shift_information"
+    t.string "project_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

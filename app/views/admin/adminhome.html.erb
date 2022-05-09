@@ -1,23 +1,23 @@
 <div class="adminmaincont">
 <%= render "admin/adminmenu" %>
-<div class="leaves-main-cont">
-  <h1 class="leave-head">Leaves</h1>
-  <%= form_with model:@leave do  |f| %>
-    <div class="field-form">
-        <%= f.label :name%><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <div class="leaves-main-cont">
+    <h1 class="leave-head">Leaves</h1>
+    <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Edit</th>
+    </tr>
+<% @leave.each do |leav| %>
+    <tr>
+      <td>
+      <%= leav.name%>
+      </td>
+      <td>
+      <%= leav.description%>
+      </td>
+    <% end %>
+  </table> 
+  <%= button_to 'Add Leave', leaveform_path, method: :get,class:"employee-add-button"%>
     </div>
-
-    <div class="field-form">
-      <%= f.label :description %><br />
-      <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
-    </div>
-
-  <div class="actions">
-    <%= f.submit "Save",class: "save-button"%>
   </div>
-  <% end %>
-  
-</div>
-
-</div>

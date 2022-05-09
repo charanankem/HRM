@@ -11,7 +11,7 @@
           <%= $pname %>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Adminstration</a></li>
+          <li><%= button_to "Adminstration", adminhome_path, class: " dropdown-item btn btn-secondary", method: :get%></li>
           <li><a class="dropdown-item" href="#">Manager</a></li>
           <li><%= button_to "Logout", destroy_employee_session_path, class: " dropdown-item btn btn-secondary", method: :delete%></li>
         </ul>

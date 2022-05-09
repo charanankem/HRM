@@ -1,0 +1,26 @@
+<div class="designation-main-cont">
+<%= render "admin/adminmenu" %>
+<div class="designation-form-cont">
+<h2>Add Holiday</h2>
+<%= form_with model:@holiday do  |f| %>
+  <div class="field-form">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :date %><br />
+    <%= f.date_field :description, autofocus: true, autocomplete: "date" %>
+  </div>
+
+  <div class="field-form">
+    <%= f.label :year %><br />
+    <%= f.text_field :year, autofocus: true, autocomplete: "year" %>
+  </div>
+
+<div class="actions">
+  <%= f.submit "Save",class: "save-button" %>
+</div> 
+<% end %>
+</div>
+</div> 

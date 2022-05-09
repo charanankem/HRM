@@ -1,0 +1,23 @@
+<div class="designation-main-cont">
+<%= render "admin/adminmenu" %>
+<div class="leaves-main-cont">
+<h1 class="leave-head">Project Management</h1>
+  <table class="table">
+      <tr>
+        <th>Project_Name</th>
+        <th>Description</th>
+        <th>Edit</th>
+      </tr>
+  <% @projects.each do |project| %>
+      <tr>
+        <td>
+        <%= project.project_name%>
+        </td>
+        <td>
+        <%= project.description%>
+        </td>
+      <% end %>
+    </table> 
+    <%= button_to "Add Project", projectform_path,method: :get,class: "save-button" %>
+</div>
+</div>

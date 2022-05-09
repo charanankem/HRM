@@ -1,7 +1,7 @@
 <div class="designation-main-cont">
 <%= render "admin/adminmenu" %>
-<div class="leaves-main-cont">
-<h1 class="leave-head">Designation Management</h1>
+<div class="designation-form-cont">
+<h2>Add Desigantion</h2>
 <%= form_with model:@designation do  |f| %>
   <div class="field-form">
       <%= f.label :name %><br />
@@ -15,7 +15,7 @@
 
 <div class="actions">
   <%= f.submit "Save",class: "save-button" %>
-</div>
+</div> 
 <% end %>
 </div>
-</div>
+</div> 
